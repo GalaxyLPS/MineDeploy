@@ -1,0 +1,3 @@
+Logs save to file
+
+Multiple servers to deploy

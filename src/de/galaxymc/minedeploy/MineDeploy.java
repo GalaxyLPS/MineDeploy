@@ -1,22 +1,22 @@
 package de.galaxymc.minedeploy;
 
-import de.galaxymc.minedeploy.gui.IMineDeployGUI;
 import de.galaxymc.minedeploy.gui.MineDeployGUI;
+import de.galaxymc.minedeploy.head.MineDeployHead;
 import de.galaxymc.minedeploy.util.setting.MineDeploySetting;
 
 public class MineDeploy {
 
-    IMineDeployGUI deployGUI;
+    MineDeployHead mineDeployHead;
     MineDeploySetting setting;
 
-    public MineDeploy() {
-        this.deployGUI = new MineDeployGUI();
+    public MineDeploy(MineDeployHead head) {
+        this.mineDeployHead = head;
         this.setting = new MineDeploySetting();
-        this.deployGUI.openGUI();
+        this.mineDeployHead.start();
     }
 
-    public IMineDeployGUI getDeployGUI() {
-        return deployGUI;
+    public MineDeployHead getMineDeployHead() {
+        return mineDeployHead;
     }
 
     public MineDeploySetting getSetting() {

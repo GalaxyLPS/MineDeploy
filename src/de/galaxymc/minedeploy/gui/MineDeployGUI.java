@@ -1,16 +1,16 @@
 package de.galaxymc.minedeploy.gui;
 
 import de.galaxymc.minedeploy.Main;
+import de.galaxymc.minedeploy.head.MineDeployHead;
 
 import javax.swing.*;
 
-public class MineDeployGUI implements IMineDeployGUI {
+public class MineDeployGUI implements MineDeployHead {
 
     JFrame jFrame;
 
-
     @Override
-    public void openGUI() {
+    public void start() {
         jFrame = new JFrame();
         jFrame.setVisible(true);
         jFrame.setTitle(Main.mineDeploy.getSetting().GUI_NAME + " Version: " + Main.mineDeploy.getSetting().VERSION);

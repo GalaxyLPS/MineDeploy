@@ -1,6 +1,7 @@
 package de.galaxymc.minedeploy;
 
 import de.galaxymc.minedeploy.gui.MineDeployGUI;
+import de.galaxymc.minedeploy.head.MineDeployHead;
 import de.galaxymc.minedeploy.headless.MineDeployConsole;
 import de.galaxymc.minedeploy.util.logger.Logger;
 
@@ -23,8 +24,9 @@ public class Main {
             }
             logger.error("Unknown program argument: " + s);
         }
-        mineDeploy = new MineDeploy(headless ? new MineDeployConsole() : new MineDeployGUI());
-        logger.info("End of MineDeploy");
+        mineDeploy = new MineDeploy();
+        MineDeployHead mineDeployHead = headless ? new MineDeployConsole() : new MineDeployGUI();
+        mineDeploy.initHead(mineDeployHead);
     }
 
 }

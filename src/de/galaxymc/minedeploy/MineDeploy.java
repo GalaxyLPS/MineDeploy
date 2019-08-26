@@ -9,9 +9,13 @@ public class MineDeploy {
     MineDeployHead mineDeployHead;
     MineDeploySetting setting;
 
-    public MineDeploy(MineDeployHead head) {
-        this.mineDeployHead = head;
+    public MineDeploy() {
         this.setting = new MineDeploySetting();
+        // can't use head in constructer
+    }
+
+    public void initHead(MineDeployHead mineDeployHead) {
+        this.mineDeployHead = mineDeployHead;
         this.mineDeployHead.start();
     }
 

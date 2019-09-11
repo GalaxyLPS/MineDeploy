@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39ce4850-6a99-4478-8b48-6b9080d64e6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace - Kopie.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/MinedeployWindowAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/close/CloseAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/open/DefaultOpenAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/open/OpenAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/headless/command/commands/ListServerCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/headless/command/commands/StopMineDeployCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/headless/command/commands/StopServerCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/MineDeployGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/MineDeployGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/ui/MinedeployMainWindow.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/ui/MinedeployMainWindow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/windowlistener/CloseListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/windowlistener/DefaultCloseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/close/DefaultCloseAdapter.java" afterDir="false" />
-    </list>
+    <list default="true" id="39ce4850-6a99-4478-8b48-6b9080d64e6f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +14,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -50,18 +33,16 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -75,15 +56,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MineDeploy GUI">
+  <component name="RunManager">
     <configuration name="MineDeploy GUI" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="de.galaxymc.minedeploy.Main" />
-      <module name="MineDeploy" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MineDeploy Headlesss" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="de.galaxymc.minedeploy.Main" />
       <module name="MineDeploy" />
       <option name="PROGRAM_PARAMETERS" value="--headless" />
@@ -91,10 +65,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.MineDeploy GUI" />
-      <item itemvalue="Application.MineDeploy Headlesss" />
-    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -108,7 +78,6 @@
       <updated>1566768034762</updated>
       <workItem from="1566768037789" duration="4441000" />
       <workItem from="1566937352599" duration="35000" />
-      <workItem from="1568220129207" duration="4517000" />
     </task>
     <servers />
   </component>
@@ -127,8 +96,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

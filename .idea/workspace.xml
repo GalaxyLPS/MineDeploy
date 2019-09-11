@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39ce4850-6a99-4478-8b48-6b9080d64e6f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/MineDeployGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/MineDeployGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/MinedeployWindowAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/MineDeployWindowAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/close/CloseAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/close/CloseAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/open/OpenAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/open/OpenAdapter.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +96,7 @@
       <updated>1566768034762</updated>
       <workItem from="1566768037789" duration="4441000" />
       <workItem from="1566937352599" duration="35000" />
-      <workItem from="1568220129207" duration="5773000" />
+      <workItem from="1568220129207" duration="6390000" />
     </task>
     <servers />
   </component>

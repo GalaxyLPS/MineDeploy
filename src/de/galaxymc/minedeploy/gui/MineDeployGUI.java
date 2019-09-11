@@ -6,6 +6,7 @@ import de.galaxymc.minedeploy.gui.listener.open.DefaultOpenAdapter;
 import de.galaxymc.minedeploy.head.MineDeployHead;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 
 public class MineDeployGUI implements MineDeployHead {
@@ -32,24 +33,23 @@ public class MineDeployGUI implements MineDeployHead {
         jFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         jFrame.setSize(500, 500);
         jFrame.setResizable(false);
+        jFrame.setLayout(new BorderLayout());
         createMenuBar();
         jFrame.setJMenuBar(bar);
-        jFrame.setLayout(new BorderLayout());
         createMainWindowContent();
 
-        jFrame.add(consoleScroll, BorderLayout.EAST);
+        jFrame.add(consoleScroll, BorderLayout.CENTER);
 
         jFrame.setVisible(true);
     }
 
     private void createMainWindowContent() {
         consoleScroll = new JScrollPane();
-        consoleScroll.setSize(100, 100);
-        consoleScroll.setBackground(Color.green);
         console = new JTextArea();
         console.setAutoscrolls(true);
         console.setEditable(false);
-        console.setText("Hallo dis very long text. pls make a break. or i break your programm. thanks. lol exd");
+        console.setBackground(Color.BLACK);
+        console.setText("Hallo dis very long text.");
         consoleScroll.add(console);
     }
 

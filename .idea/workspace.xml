@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39ce4850-6a99-4478-8b48-6b9080d64e6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace - Kopie.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/MinedeployWindowAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/close/CloseAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/open/DefaultOpenAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/open/OpenAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/headless/command/commands/ListServerCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/headless/command/commands/StopMineDeployCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/headless/command/commands/StopServerCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/MineDeployGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/MineDeployGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/ui/MinedeployMainWindow.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/ui/MinedeployMainWindow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/windowlistener/CloseListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/windowlistener/DefaultCloseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/close/DefaultCloseAdapter.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +95,7 @@
       <updated>1566768034762</updated>
       <workItem from="1566768037789" duration="4441000" />
       <workItem from="1566937352599" duration="35000" />
-      <workItem from="1568220129207" duration="4517000" />
+      <workItem from="1568220129207" duration="5773000" />
     </task>
     <servers />
   </component>

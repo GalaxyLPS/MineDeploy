@@ -1,13 +1,16 @@
 package de.galaxymc.minedeploy.gui;
 
 import de.galaxymc.minedeploy.Main;
+import de.galaxymc.minedeploy.gui.listener.click.ClickAdapter;
 import de.galaxymc.minedeploy.gui.listener.close.DefaultCloseAdapter;
 import de.galaxymc.minedeploy.gui.listener.open.DefaultOpenAdapter;
 import de.galaxymc.minedeploy.head.MineDeployHead;
+import de.galaxymc.minedeploy.util.servertype.ServerType;
 
 import javax.swing.*;
-import javax.swing.border.Border;
+import javax.swing.tree.DefaultMutableTreeNode;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 
 public class MineDeployGUI implements MineDeployHead {
 
@@ -15,9 +18,12 @@ public class MineDeployGUI implements MineDeployHead {
 
     JMenuBar bar;
 
-    JScrollPane consoleScroll;
+    JScrollPane scrollPane;
     JTextArea console;
 
+    JPanel noSelectedPanel;
+
+    JTree serverTree;
 
     @Override
     public void start() {
@@ -31,27 +37,46 @@ public class MineDeployGUI implements MineDeployHead {
         jFrame.addWindowListener(new DefaultCloseAdapter());
         jFrame.addWindowListener(new DefaultOpenAdapter());
         jFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        jFrame.setSize(500, 500);
+        jFrame.setSize(800, 800);
         jFrame.setResizable(false);
         jFrame.setLayout(new BorderLayout());
         createMenuBar();
         jFrame.setJMenuBar(bar);
         createMainWindowContent();
 
-        jFrame.add(consoleScroll, BorderLayout.CENTER);
+        jFrame.add(new JScrollPane(serverTree), BorderLayout.WEST);
+        jFrame.add(new JScrollPane(noSelectedPanel), BorderLayout.CENTER);
+        jFrame.add(scrollPane, BorderLayout.EAST);
 
         jFrame.setVisible(true);
     }
 
     private void createMainWindowContent() {
-        consoleScroll = new JScrollPane();
+        DefaultMutableTreeNode servers = new DefaultMutableTreeNode("Servers");
+        for (ServerType serverType : ServerType.values()) {
+
+            servers.add(new DefaultMutableTreeNode(serverType.name()));
+        }
+        serverTree = new JTree(servers);
+
+        JButton button = new JButton("Add Server");
+
+        button.addActionListener(new ClickAdapter() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
+        noSelectedPanel = new JPanel();
+        noSelectedPanel.add(button);
+
+
         console = new JTextArea();
-        console.setAutoscrolls(true);
-        console.setEditable(false);
-        console.setBackground(Color.BLACK);
-        console.setText("Hallo dis very long text.");
-        consoleScroll.add(console);
+        //console.setText("Hallo o dis ver o y long textHallo o dis ver o y long textHallo o dis ver o y long textHallo o dis ver o y long textHallo o dis ver o y long textHallo o dis ver o y long text");
+        scrollPane = new JScrollPane(console);
     }
+
 
     private void createMenuBar() {
         bar = new JMenuBar();

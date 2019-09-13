@@ -4,7 +4,9 @@ import de.galaxymc.minedeploy.Main;
 import de.galaxymc.minedeploy.gui.listener.click.ClickAdapter;
 import de.galaxymc.minedeploy.gui.listener.close.DefaultCloseAdapter;
 import de.galaxymc.minedeploy.gui.listener.open.DefaultOpenAdapter;
+import de.galaxymc.minedeploy.gui.ui.CreateServerDialog;
 import de.galaxymc.minedeploy.head.MineDeployHead;
+import de.galaxymc.minedeploy.util.logger.Logger;
 import de.galaxymc.minedeploy.util.servertype.ServerType;
 
 import javax.swing.*;
@@ -16,6 +18,9 @@ public class MineDeployGUI implements MineDeployHead {
 
     private JFrame jFrame;
 
+    Logger logger;
+
+
     JMenuBar bar;
 
     JScrollPane scrollPane;
@@ -25,8 +30,14 @@ public class MineDeployGUI implements MineDeployHead {
 
     JTree serverTree;
 
+    public MineDeployGUI() {
+        logger = new Logger("MineDeployGUI");
+        ;
+    }
+
     @Override
     public void start() {
+        logger.info("Start MineDeployGUI");
         createWindow();
     }
 
@@ -40,6 +51,7 @@ public class MineDeployGUI implements MineDeployHead {
         jFrame.setSize(800, 800);
         jFrame.setResizable(false);
         jFrame.setLayout(new BorderLayout());
+        jFrame.setLocationRelativeTo(null);
         createMenuBar();
         jFrame.setJMenuBar(bar);
         createMainWindowContent();
@@ -64,7 +76,8 @@ public class MineDeployGUI implements MineDeployHead {
         button.addActionListener(new ClickAdapter() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                logger.info("add server click performed");
+                CreateServerDialog dialog = new CreateServerDialog(jFrame);
             }
         });
 

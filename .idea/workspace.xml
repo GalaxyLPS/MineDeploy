@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39ce4850-6a99-4478-8b48-6b9080d64e6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/MineDeployAbstractAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/click/ClickAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/server/ServerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/server/server/MinecraftServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/ui/CreateServerDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/ui/DeleteServerDialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/MineDeploy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/MineDeploy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/MineDeployGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/MineDeployGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/close/DefaultCloseAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/gui/listener/close/DefaultCloseAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/minecraft/DefaultMinecraftServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/minecraft/MinecraftServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/minecraft/MinecraftServerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/server/ServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/server/ServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/server/server/MinecraftServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/server/server/MinecraftServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/util/array/ArrayHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/util/array/ArrayHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/util/servertype/ServerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/galaxymc/minedeploy/util/servertype/ServerType.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,7 +108,7 @@
       <workItem from="1566937352599" duration="35000" />
       <workItem from="1568220129207" duration="6390000" />
       <workItem from="1568309678549" duration="3748000" />
-      <workItem from="1568384248471" duration="3133000" />
+      <workItem from="1568384248471" duration="7330000" />
     </task>
     <servers />
   </component>

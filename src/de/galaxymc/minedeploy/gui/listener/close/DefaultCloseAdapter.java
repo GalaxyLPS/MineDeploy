@@ -17,5 +17,6 @@ public class DefaultCloseAdapter extends CloseAdapter {
         // shutdown handler
         logger.info("Close Window!");
         e.getWindow().dispose();
+        System.exit(0);
     }
 }

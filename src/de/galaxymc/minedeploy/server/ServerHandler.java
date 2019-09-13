@@ -1,6 +1,7 @@
 package de.galaxymc.minedeploy.server;
 
 import de.galaxymc.minedeploy.server.server.MinecraftServer;
+import de.galaxymc.minedeploy.util.logger.Logger;
 import de.galaxymc.minedeploy.util.servertype.ServerType;
 
 import java.util.HashMap;
@@ -9,7 +10,10 @@ public class ServerHandler {
 
     HashMap<ServerType, MinecraftServer[]> servers = new HashMap<>();
 
+    Logger logger;
+
     public ServerHandler() {
+        logger = new Logger("ServerHandler");
         for (ServerType serverType : ServerType.values()) {
             servers.put(serverType, new MinecraftServer[100]);
         }
@@ -39,7 +43,7 @@ public class ServerHandler {
 
     private int getAvailableId(ServerType type) {
         for (int i = 0; i < servers.get(type).length; i++) {
-            if (servers.get(type) == null) {
+            if (servers.get(type)[i] == null) {
                 return i;
             }
         }

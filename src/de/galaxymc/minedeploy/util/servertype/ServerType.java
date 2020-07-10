@@ -1,10 +1,14 @@
 package de.galaxymc.minedeploy.util.servertype;
 
-import de.galaxymc.minedeploy.server.ServerHandler;
-
 public enum ServerType {
 
-    VANILLA, BUKKIT, SPIGOT, SPONGE, FORGE, BUNGEECORD;
+    VANILLA(MinecraftVersion.values()), BUKKIT(MinecraftVersion.values()), SPIGOT(MinecraftVersion.values()), SPONGE(MinecraftVersion.MC1_8, MinecraftVersion.MC1_9), FORGE(MinecraftVersion.values()), BUNGEECORD();
+
+    private final MinecraftVersion[] versions;
+
+    ServerType(MinecraftVersion... versions) {
+        this.versions = versions;
+    }
 
     public static ServerType getFromString(String s) {
         for (ServerType t : values()) {
@@ -13,6 +17,10 @@ public enum ServerType {
             }
         }
         return null;
+    }
+
+    public MinecraftVersion[] getVersions() {
+        return versions;
     }
 
 }

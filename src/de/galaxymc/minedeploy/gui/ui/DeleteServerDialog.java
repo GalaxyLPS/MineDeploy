@@ -1,4 +1,6 @@
 package de.galaxymc.minedeploy.gui.ui;
 
-public class DeleteServerDialog {
+import javax.swing.*;
+
+public class DeleteServerDialog extends JDialog {
 }

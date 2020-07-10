@@ -13,7 +13,7 @@ public class MineDeploy {
 
     public MineDeploy() {
         this.setting = new MineDeploySetting();
-        // can't use head in constructer
+        // can't use head in constructor
     }
 
     public void initHead(MineDeployHead mineDeployHead) {

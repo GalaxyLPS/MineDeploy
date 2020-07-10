@@ -4,50 +4,38 @@ import de.galaxymc.minedeploy.server.server.MinecraftServer;
 import de.galaxymc.minedeploy.util.logger.Logger;
 import de.galaxymc.minedeploy.util.servertype.ServerType;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ServerHandler {
 
-    HashMap<ServerType, MinecraftServer[]> servers = new HashMap<>();
+    HashMap<ServerType, ArrayList<MinecraftServer>> servers;
 
     Logger logger;
 
     public ServerHandler() {
         logger = new Logger("ServerHandler");
+        servers = new HashMap<>();
         for (ServerType serverType : ServerType.values()) {
-            servers.put(serverType, new MinecraftServer[100]);
+            servers.put(serverType, new ArrayList<>());
         }
     }
 
-    public void addServer(ServerType type, MinecraftServer server) {
-        MinecraftServer[] a = servers.get(type);
-        a[getAvailableId(type)] = server;
-        servers.put(type, a);
+    public void addServer(MinecraftServer server) {
+        servers.get(server.getType()).add(server);
     }
 
     public void removeServer(MinecraftServer server) {
         for (ServerType type : ServerType.values()) {
-            removeServer(type, server);
+            servers.get(type).remove(server);
         }
     }
 
-    public void removeServer(ServerType type, MinecraftServer server) {
-        MinecraftServer[] a = servers.get(type);
-        for (int i = 0; i < servers.get(type).length; i++) {
-            if (servers.get(type)[i] == server) {
-                a[i] = null;
-                return;
-            }
+    public MinecraftServer getServer(ServerType type, int id) {
+        for (MinecraftServer server : servers.get(type)) {
+            if (server.getId() == id) return server;
         }
-    }
-
-    private int getAvailableId(ServerType type) {
-        for (int i = 0; i < servers.get(type).length; i++) {
-            if (servers.get(type)[i] == null) {
-                return i;
-            }
-        }
-        return -1;
+        return null;
     }
 
 }

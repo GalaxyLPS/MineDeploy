@@ -6,29 +6,27 @@ import de.galaxymc.minedeploy.gui.listener.close.DefaultCloseAdapter;
 import de.galaxymc.minedeploy.gui.listener.open.DefaultOpenAdapter;
 import de.galaxymc.minedeploy.gui.ui.CreateServerDialog;
 import de.galaxymc.minedeploy.head.MineDeployHead;
+import de.galaxymc.minedeploy.server.server.MinecraftServer;
 import de.galaxymc.minedeploy.util.logger.Logger;
 import de.galaxymc.minedeploy.util.servertype.ServerType;
 
 import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.TreeNode;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.util.Iterator;
 
 public class MineDeployGUI implements MineDeployHead {
 
-    private JFrame jFrame;
-
     Logger logger;
-
-
     JMenuBar bar;
-
     JScrollPane scrollPane;
     JTextArea console;
-
     JPanel noSelectedPanel;
-
     JTree serverTree;
+
+    private JFrame jFrame;
 
     public MineDeployGUI() {
         logger = new Logger("MineDeployGUI");
@@ -70,24 +68,57 @@ public class MineDeployGUI implements MineDeployHead {
             servers.add(new DefaultMutableTreeNode(serverType.name()));
         }
         serverTree = new JTree(servers);
+        serverTree.addTreeSelectionListener(e -> {
+            try {
+                int id = Integer.parseInt(e.getNewLeadSelectionPath().getLastPathComponent().toString());
+                ServerType type = ServerType.valueOf(e.getNewLeadSelectionPath().getPath()[1].toString());
+                MinecraftServer server = Main.mineDeploy.getServerHandler().getServer(type, id);
+            } catch (NumberFormatException nfe) {
 
-        JButton button = new JButton("Add Server");
+            }
+//            ServerType type = ServerType.valueOf(e.getNewLeadSelectionPath().getLastPathComponent().toString());
+//            if (type != null) {
+//
+//                return;
+//            }
+        });
 
-        button.addActionListener(new ClickAdapter() {
+        JButton addServer = new JButton("Add Server");
+
+        addServer.addActionListener(new ClickAdapter() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                logger.info("add server click performed");
+                logger.info("add server click");
                 CreateServerDialog dialog = new CreateServerDialog(jFrame);
+                if (dialog.wasServerCreated()) {
+                    DefaultMutableTreeNode root = (DefaultMutableTreeNode) serverTree.getModel().getRoot();
+                    Iterator<TreeNode> nodeIterator = root.children().asIterator();
+                    while (nodeIterator.hasNext()) {
+                        DefaultMutableTreeNode n = (DefaultMutableTreeNode) nodeIterator.next();
+                        ServerType type = ServerType.getFromString(n.toString());
+                        if (type == null) {
+                            logger.error("Couldn't find matching server type");
+                            return;
+                        }
+                        if (dialog.getServer().getType() == type) {
+                            n.add(new DefaultMutableTreeNode(dialog.getServer().getVersion().getName() + "-" + dialog.getServer().getId()));
+                            Main.mineDeploy.getServerHandler().addServer(dialog.getServer());
+                            logger.info("Minecraft server with id " + dialog.getServer().getId() + " and version " + dialog.getServer().getVersion() + " was added!");
+                            break;
+                        }
+                    }
+                }
             }
         });
 
         noSelectedPanel = new JPanel();
-        noSelectedPanel.add(button);
+        noSelectedPanel.add(addServer);
 
 
         console = new JTextArea();
-        //console.setText("Hallo o dis ver o y long textHallo o dis ver o y long textHallo o dis ver o y long textHallo o dis ver o y long textHallo o dis ver o y long textHallo o dis ver o y long text");
         scrollPane = new JScrollPane(console);
+        //console.setText("Hallo o dis ver o y long textHallo o dis ver o y long textHallo o dis ver o y long textHallo o dis ver o y long textHallo o dis ver o y long textHallo o dis ver o y long text");
+        console.setMaximumSize(scrollPane.getMaximumSize());
     }
 
 
